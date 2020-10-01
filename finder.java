@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Scanner;
 
-class finder extends JFrame implements ActionListener {
+class dayfinder extends JFrame implements ActionListener {
     JFrame frame = new JFrame();
     JPanel panel = new JPanel();
     JButton button1 = new JButton("result");
@@ -23,12 +23,12 @@ class finder extends JFrame implements ActionListener {
     Font font = new Font("Gotham-Black", Font.PLAIN, 20);
 
 
-    ImageIcon img = new ImageIcon("C:\\Users\\SOURAV\\Desktop\\HY.png");
-    JLabel im = new JLabel("", img, JLabel.CENTER);
+    //ImageIcon img = new ImageIcon("C:\\Users\\SOURAV\\Desktop\\HY.png");
+    //JLabel im = new JLabel("", img, JLabel.CENTER);
 
 
-    public finder() {
-        frame.setTitle("Day Finding");
+    public dayfinder() {
+        frame.setTitle("Day Finder");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setResizable(false);
@@ -37,7 +37,7 @@ class finder extends JFrame implements ActionListener {
         frame.setSize(340, 450);
         frame.add(panel);
 
-        im.setSize(100, 100);
+        //im.setSize(100, 100);
 
 
         panel.add(label, "\n");
@@ -46,7 +46,6 @@ class finder extends JFrame implements ActionListener {
 
         panel.add(label1, "\n");
         panel.add(textField1);
-
 
         panel.add(label2, "\n");
         panel.add(textField2);
@@ -67,7 +66,7 @@ class finder extends JFrame implements ActionListener {
 
     public static void main(String args[]) {
 
-        finder fc = new finder();
+        dayfinder fc = new dayfinder();
 
     }
 
@@ -159,8 +158,7 @@ class finder extends JFrame implements ActionListener {
             c = n / 10;
 
 
-            f = (k + (13 * (mo + 1)) / 5 + d + (d / 4) + (c / 4) + 5 * c) % 6;
-
+            f = (k + (13 * (mo + 1)) / 5 + d + (d / 4) + (c / 4) + 5 * c) % 7; // it will be moded  by 7
 
             switch (f) {
                 case 0:
